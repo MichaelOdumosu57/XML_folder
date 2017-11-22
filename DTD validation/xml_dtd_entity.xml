@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="yes" ?>
+<!DOCTYPE xml_dtd_entity [
+  <!ELEMENT xml_dtd_entity (author)>
+  <!ELEMENT author (#PCDATA)>
+  <!ENTITY sj "Sonoo Jaiswal">
+]>
+<xml_dtd_entity>
+    <author>&sj;</author>
+</xml_dtd_entity>
+

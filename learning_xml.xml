@@ -1,0 +1,175 @@
+learning XML
+
+    What is xml
+    
+    Xml (eXtensible Markup Language) is a mark up language.
+    XML is designed to store and transport data.
+    Xml was released in late 90’s. it was created to provide an easy to use and store self describing data.
+    XML became a W3C Recommendation on February 10, 1998.
+    XML is not a replacement for HTML.
+    XML is designed to be self-descriptive.
+    XML is designed to carry data, not to display data.
+    XML tags are not predefined. You must define your own tags.
+    XML is platform independent and language independent.
+    
+    ?Many corporation use XML due to its platform independent feature
+    
+    Features and Advantages of XML
+    
+    ?it edits the html page dynamically if you have a lot of data changing
+    ?xml stores data in plain text format making things very compatible
+    ?when platform upgrade is needed, XML is the way to go
+    ?XML makes data more available
+    ?XML can make new web-tech languages such as
+        XHTML
+        WSDL
+        RSS
+        
+    <?xml version="1.0" encoding="ISO-8859-1"?>
+    <note>
+      <to>Tove</to>
+      <from>Jani</from>
+      <heading>Reminder</heading>
+      <body>Don't forget me this weekend!</body>
+    </note>
+    
+    The first line is the XML declaration. It defines the XML version (1.0) and the encoding used (ISO-8859-1 = Latin-1/West European character set).
+    
+    The next line describes the root element of the document (like saying: "this document is a note"):
+    
+    everything inside are the child elements
+    
+    file :first_xml.xml
+    
+    XML Related Technologies
+    
+No.	Technology	Meaning	Description
+1)	XHTML	Extensible html	It is a clearer and stricter version of XML. It belongs to the family of XML markup languages. It was developed to make html more extensible and increase inter-operability with other data.
+2)	XML DOM	XML document object model	It is a standard document model that is used to access and manipulate XML. It defines the XML file in tree structure.
+3)	XSL
+it contain three parts:
+i) XSLT (xsl transform)
+ii) XSL
+iii)XPath	Extensible style sheet language
+i) It transforms XML into other formats, like html.
+ii) It is used for formatting XML to screen, paper etc.
+iii) It is a language to navigate XML documents.
+4)	XQuery	XML query language	It is a XML based language which is used to query XML based data.
+5)	DTD	Document type definition	It is an standard which is used to define the legal elements in an XML document.
+6)	XSD	XML schema definition	It is an XML based alternative to dtd. It is used to describe the structure of an XML document.
+7)	XLink	XML linking language	xlink stands for XML linking language. This is a language for creating hyperlinks (external and internal links) in XML documents.
+8)	XPointer	XML pointer language	It is a system for addressing components of XML based internet media. It allows the xlink hyperlinks to point to more specific parts in the XML document.
+9)	SOAP	Simple object access protocol	It is an acronym stands simple object access protocol. It is XML based protocol to let applications exchange information over http. in simple words you can say that it is protocol used for accessing web services.
+10)	WSDL	web services description languages	It is an XML based language to describe web services. It also describes the functionality offered by a web service.
+11)	RDF	Resource description framework	RDF is an XML based language to describe web resources. It is a standard model for data interchange on the web. It is used to describe the title, author, content and copyright information of a web page.
+12)	SVG	Scalable vector graphics	It is an XML based vector image format for two-dimensional images. It defines graphics in XML format. It also supports animation.
+13)	RSS	Really simple syndication	RSS is a XML-based format to handle web content syndication. It is used for fast browsing for news and updates. It is generally used for news like sites.
+
+    
+    XML Attributes
+    
+        ?adds information about edited element
+        ?Note: XML attributes must always be quoted. We can use single or double quote.
+        
+        syntax
+        
+        <element [attribute] = "[value]"></element>
+        the value is known as metadata
+        
+        you should avoid them however instead use the subelement version which looks like this
+        
+        <element>
+        <attribute [aka subelement]> [data]</attribute>
+        </element>
+        
+    XML Comments
+        
+        ? cannot nest XML comments one inside another
+        syntax
+        ?Don't use a comment before an XML declaration.
+        ?You can use a comment anywhere in XML document except within attribute value
+        
+        syntax
+        
+            <!-- Write your comment-->
+            
+    XML Tree Structure
+    
+        how XML works, the way whatever compiler or intrepreter traverses an XML document
+        
+        Descendants and ancestors just like a tree
+        
+    XML Validation
+    
+        ?well formed XML document is XML with valid syntax
+        
+        Valid XML document
+        
+            It must be well formed (satisfy all the basic syntax condition)
+            It should be behave according to predefined DTD or XML schema
+            
+            rules
+            
+                ?It must begin with the XML declaration.-->
+                ?It must have one unique root element.
+                ?All start tags of XML documents must match end tags.
+                ?XML tags are case sensitive.
+                ?All elements must be closed.
+                ?All elements must be properly nested.
+                ?All attributes values must be quoted.
+                ?XML entities must be used for special characters.
+
+    XML DTD
+    
+        stands for Document Type Definition
+        ?legal building blocks for any xml document
+
+        Visit http://www.xmlvalidation.com to validate the XML file
+        
+        when validation with DTD the xml file needs this to come after the xml declaration
+        
+            <!DOCTYPE [xml file name without.xml] SYSTEM "[xml file name without.xml].dtd">
+        
+        in the .dtd file you need
+        
+            <!ELEMENT [tagname] ([child element],[child element] ...)>
+            or
+            <!ELEMENT [tagname] (#PCDATA)>
+            
+        for every element in the xml file
+        
+        file: DTD validation folder employee.xml, employee.dtd
+        
+        XML DTD with entity declaration
+        
+        different way of doing things
+        an entity has three parts
+            An ampersand (&)
+            An entity name
+            A semicolon (;)
+        to make it
+        
+            <?xml version="1.0" standalone="yes" ?>
+                <!DOCTYPE [filename] [
+                  <!ELEMENT [filename] (#PCDATA)>
+                  <!--this is the root element it needs the same name is the filename-->
+                  <!ENTITY [variable] "[data]">
+                ]>
+                <author>&data;</author>
+                
+        file xml_dtd_entity.xml
+        
+    XML CSS
+    
+        CSS in XML is used to format the whole XML document
+        
+        to link
+        
+            <?xml-stylesheet type="text/css" href="cssemployee.css"?>
+            
+        in the css file refer to tutor.txt, for editing the xml there is the same as editing the html
+        
+        however you should use XSLT to edit XML files
+        
+        folder: xml_css
+        
