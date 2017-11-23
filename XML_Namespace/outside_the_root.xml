@@ -1,0 +1,14 @@
+<root>
+<h:table xmlns:h="http://www.abc.com/TR/html4/">
+  <h:tr>
+    <h:td>Aries</h:td>
+    <h:td>Bingo</h:td>
+  </h:tr>
+</h:table>
+  
+<f:table xmlns:f="http://www.xyz.com/furniture">
+  <f:name>Computer table</f:name>
+  <f:width>80</f:width>
+  <f:length>120</f:length>
+</f:table>
+</root>

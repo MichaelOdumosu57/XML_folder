@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Important Note</h1>
+<div>
+<b>To:</b> <span id="to"> </span><br>
+<b>From:</b> <span id="from"></span><br>
+<b>Message:</b> <span id="message"></span>
+</div>
+<script>
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","externalfile:gbheifiifcfekkamhepkeogobihicgmn:sftpfs:%2F%2Fitsunix%2Ealbany%2Eedu:22%2Fmo422733:8c76189d6d79b89d2195035f0cec044aa6fc2aff/XML_Folder/XML_DOM/note.xml",false);
+xmlhttp.send([body = null]);
+xmlDoc=xmlhttp.responseXML;
+document.getElementById("to").innerHTML=
+xmlDoc.getElementsByTagName("to")[0].childNodes[0].nodeValue;
+document.getElementById("from").innerHTML=
+xmlDoc.getElementsByTagName("from")[0].childNodes[0].nodeValue;
+document.getElementById("message").innerHTML=
+xmlDoc.getElementsByTagName("body")[0].childNodes[0].nodeValue;
+
+
+</script>
+</body>
+</html>

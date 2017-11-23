@@ -178,5 +178,128 @@ iii) It is a language to navigate XML documents.
         language expressing constraint about xml
             <there are "several of them out there">
                 <more control "about xml docuiment">
+                    
+        <xs:element name="employee"> : It defines the element name employee.
+        
+        <xs:complexType> : It defines that the element 'employee' is complex type.
+        
+        <xs:sequence> : It defines that the complex type is a sequence of elements.
+        
+            simpleType
+            complexType
+            simpleType
+            
+            The simpleType allows you to have text-based elements. It contains less attributes, child elements, and cannot be left empty.
+            
+            complexType
+            
+            The complexType allows you to hold multiple attributes and elements. It can contain additional sub elements and can be left empty.
+            
+            folder: XML_SCHEMA
+            
+    XML CDATA
+    
+        (Unparsed Character data):
+        syntax
+        <![CDATA[
+          prints it out like a string
+        ]]>
+        
+        so in the browser it prints like a strings
+        
+        file:xml_cdata.xml
+    
+    XML PCDATA
+    
+        (Parsed Character Data)
+        
+        regular data between the xml tags
+        
+        file:xml_pcdata.xml
+        
+    XML Parsers
+    
+        read XML data and make it easier for programs to use XML
+        
+            <types></types>
+            
+            DOM and SAX
+            
+    XML DOM
+    
+        opens .xml into http browser for the data to be used by javascript
+        
+        to get from external .xml
+        
+        <script
+        if (window.XMLHttpRequest)
+          {// code for IE7+, Firefox, Chrome, Opera, Safari
+          xmlhttp=new XMLHttpRequest();
+          }
+        else
+          {// code for IE6, IE5
+          xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+          }
+        xmlhttp.open("GET","[file].xml",false);
+        xmlhttp.send();
+        xmlDoc=xmlhttp.responseXML;
+        <!--xmlDoc, treat it as an html page now, but know it there to edit your html page based off the javascript or jquery events->
+        ></script>
+        
+        ? doesn't work on chrome because of cross browser origin
+
+        to get from javascript
+        
+        <script>
+            txt = "string";
+            if (window.DOMParser)
+              {
+              parser=new DOMParser();
+              xmlDoc=parser.parseFromString(txt,"text/xml");
+              }
+            else // Internet Explorer
+              {
+              xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+              xmlDoc.async=false;
+              xmlDoc.loadXML(txt);
+              }
+        </script>
+        
+        folder: XML_DOM
+    XML Database
+    
+        < XML database is a data persistence software system used for storing the huge amount of information in XML format. It provides a secure place to store XML documents." >
+        
+        <types></types>
+         
+            xml-enabled
+            
+                XML-enable database works just like a relational database. It is like an extension provided for the conversion of XML documents. In this database, data is stored in table, in the form of rows and columns
+            
+            Native XML Database
+            
+                stored as a container, which you can easily query
+                
+                file native_xml_database.xml
+                
+    XML Namespace
+    
+        used so there is no confusion in xml document
+        so if you are talking about the same object, you can use different namespaces to differentiate the data
+        
+        syntax
+        
+            <[name]: [root_element] xmlns:[name] = "URL">
+                <[name]:[child_element]></[name]:[child_element]>
+                
+                name specifies an association and url specifies where the association only applies to
+                
+                to make it work you can use the prefix before the element or using the root tag and placing the xmlns in the filename tag or all the xmlns in the root tag itself
+                
+        <default namespace></default>
+        
+            <tutorials xmlns="http://www.javatpoint.com/java-tutorial">'
+            
+            when you do this you do not need prefixes
         
         
