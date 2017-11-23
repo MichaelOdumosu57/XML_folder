@@ -1,0 +1,16 @@
+<!ELEMENT class (employee,employee,employee)>
+<!ELEMENT employee (firstname,lastname,nickname,salary)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT nickname (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>
+<!ELEMENT employee (firstname,lastname,nickname,salary)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT nickname (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>
+<!ELEMENT employee (firstname,lastname,nickname,salary)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT nickname (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>

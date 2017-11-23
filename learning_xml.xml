@@ -301,5 +301,7 @@ iii) It is a language to navigate XML documents.
             <tutorials xmlns="http://www.javatpoint.com/java-tutorial">'
             
             when you do this you do not need prefixes
+            
+            folder: XML_namespace
         
         
